@@ -84,19 +84,6 @@ return {
   -- Highlight undercurl for diagnostics
   {
     "RRethy/vim-illuminate",
-    event = "VeryLazy",
-    config = function()
-      require("illuminate").configure({
-        delay = 200,
-        large_file_cutoff = 2000,
-        providers = { "lsp", "treesitter", "regex" },
-      })
-      vim.cmd([[
-        hi DiagnosticUnderlineError gui=undercurl guisp=Red
-        hi DiagnosticUnderlineWarn gui=undercurl guisp=Yellow
-        hi DiagnosticUnderlineInfo gui=undercurl guisp=Blue
-        hi DiagnosticUnderlineHint gui=undercurl guisp=Grey
-      ]])
-    end,
+    enabled = false, -- Already configured in illuminate.lua
   },
 }

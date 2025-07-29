@@ -27,9 +27,6 @@ return {
     opts = { use_diagnostic_signs = true },
   },
 
-  -- disable trouble
-  { "folke/trouble.nvim", enabled = false },
-
   -- override nvim-cmp and add cmp-emoji
   {
     "hrsh7th/nvim-cmp",
@@ -76,16 +73,16 @@ return {
     },
   },
 
-  -- add tsserver and setup with typescript.nvim instead of lspconfig
+  -- add tsserver and setup with typescript-tools.nvim instead of lspconfig
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "jose-elias-alvarez/typescript.nvim",
+      "pmizio/typescript-tools.nvim",
       init = function()
         require("lazyvim.util").lsp.on_attach(function(_, buffer)
           -- stylua: ignore
-          vim.keymap.set( "n", "<leader>co", "TypescriptOrganizeImports", { buffer = buffer, desc = "Organize Imports" })
-          vim.keymap.set("n", "<leader>cR", "TypescriptRenameFile", { desc = "Rename File", buffer = buffer })
+          vim.keymap.set( "n", "<leader>co", function() require("typescript-tools.api").organize_imports() end, { buffer = buffer, desc = "Organize Imports" })
+          vim.keymap.set("n", "<leader>cR", function() require("typescript-tools.api").rename_file() end, { desc = "Rename File", buffer = buffer })
         end)
       end,
     },
@@ -100,9 +97,9 @@ return {
       -- return true if you don't want this server to be setup with lspconfig
       ---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
       setup = {
-        -- example to setup with typescript.nvim
+        -- example to setup with typescript-tools.nvim
         tsserver = function(_, opts)
-          require("typescript").setup({ server = opts })
+          require("typescript-tools").setup({ server = opts })
           return true
         end,
         -- Specify * to use this function as a fallback for any server

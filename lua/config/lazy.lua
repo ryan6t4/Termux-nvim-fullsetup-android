@@ -37,17 +37,31 @@ require("lazy").setup({
   }, -- automatically check for plugin updates
   performance = {
     rtp = {
-      -- disable some rtp plugins
+      -- disable some rtp plugins for better performance
       disabled_plugins = {
         "gzip",
-        -- "matchit",
-        -- "matchparen",
-        -- "netrwPlugin",
+        "matchit",
+        "matchparen",
+        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",
         "zipPlugin",
+        -- Additional mobile optimizations
+        "2html_plugin",
+        "getscript",
+        "getscriptPlugin",
+        "logipat",
+        "rrhelper",
+        "spellfile_plugin",
+        "vimball",
+        "vimballPlugin",
       },
     },
+    -- Additional performance optimizations for mobile
+    cache = {
+      enabled = true,
+    },
+    reset_packpath = true,
   },
 })
