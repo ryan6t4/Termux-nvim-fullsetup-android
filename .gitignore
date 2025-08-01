@@ -1,0 +1,213 @@
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Neovim temporary files
+*.tmp
+.nvim/
+.nvimlog
+debug.log
+startup.log
+
+# Plugin manager files
+lazy-lock.json.bak
+.repro/
+
+# LSP and language server logs
+lsp.log
+*.log
+
+# Compilation and build artifacts
+*.o
+*.so
+*.dylib
+*.dll
+*.exe
+a.out
+*.class
+*.jar
+target/
+build/
+dist/
+out/
+
+# Language-specific
+## Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
+
+## Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.node_repl_history
+*.tgz
+package-lock.json.bak
+
+## Go
+*.test
+*.prof
+vendor/
+
+## Rust
+Cargo.lock
+target/
+
+## Java
+*.class
+*.war
+*.ear
+*.jar
+hs_err_pid*
+
+## C/C++
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Package managers
+.bundle/
+vendor/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.db
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Temporary directories
+tmp/
+temp/
+.tmp/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Termux-specific
+storage/
+.termux/termux.properties.bak
+
+# Testing
+test-results/
+coverage/
+.nyc_output/
+
+# Documentation build
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Cache directories
+.cache/
+*.cache
+
+# Lock files (keep some, ignore others)
+yarn.lock.bak
+Pipfile.lock.bak
+
+# Local configuration overrides
+local.lua
+local-*.lua
+.local/
+
+# Spell files
+*.spl
+*.sug
+
+# Session files
+Session.vim
+.session
+
+# Personal notes and TODO files
+TODO.md
+NOTES.md
+.notes/
+
+# AI model files (can be large)
+*.bin
+*.gguf
+*.ggml
+models/
+
+# Performance profiling
+profile.json
+perf.data*
+
+# Core dumps
+core.*
+
+# Mobile development
+*.apk
+*.ipa
+*.aab
+
+# Dependency directories that should be ignored
+.deps/
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
