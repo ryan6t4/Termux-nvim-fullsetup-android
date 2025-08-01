@@ -11,7 +11,27 @@ return {
         "emmet_ls",   -- Emmet
         "tsserver",   -- TypeScript/JS
         "jsonls",     -- JSON
+        "sqls",       -- SQL LSP for MariaDB/MySQL
       })
     end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        sqls = {
+          settings = {
+            sqls = {
+              connections = {
+                {
+                  driver = "mysql",
+                  dataSourceName = "root:root@tcp(127.0.0.1:3306)/",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   },
 }

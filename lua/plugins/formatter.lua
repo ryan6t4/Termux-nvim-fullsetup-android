@@ -10,6 +10,8 @@ return {
         css = { "prettier" },
         json = { "prettier" },
         lua = { "stylua" },
+        sql = { "sqlfmt" },
+        mysql = { "sqlfmt" },
       },
       format_on_save = {
         lsp_fallback = true,
