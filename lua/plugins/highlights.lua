@@ -9,7 +9,7 @@ return {
   },
 
   -- Git word diff
-  
+
   -- Indent guides + context
   {
     "lukas-reineke/indent-blankline.nvim",

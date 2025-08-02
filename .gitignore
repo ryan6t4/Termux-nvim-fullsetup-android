@@ -1,0 +1,7 @@
+# Stylua binary and downloads
+stylua
+stylua.zip
+
+# Temporary files
+*.tmp
+/tmp/
