@@ -1,0 +1,41 @@
+# Neovim data files
+.netrwhist
+tags
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Font installation artifacts
+*.zip
+/tmp/nerd-font-*
+
+# Backup files
+*.bak
+*.backup
+
+# Debug logs
+*.log
+debug.log
+
+# Node modules (if any JS tools are used)
+node_modules/
+
+# Python cache (if any Python tools are used)
+__pycache__/
+*.pyc
+*.pyo
+
+# Test files
+test_*
+*_test.lua
